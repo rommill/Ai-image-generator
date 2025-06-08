@@ -25,19 +25,19 @@
             </button>
         </header>
         <div class="main-content">
-            <form action="#" class="promt-form">
-                <!-- Promt Container -->
+            <form action="#" class="prompt-form">
+                <!-- Prompt Container -->
                 <div class="prompt-container">
-                    <textarea class="promt-input" placeholder="Describe your imagination in detail..." required
+                    <textarea class="prompt-input" placeholder="Describe your imagination in detail..." required
                         autofocus></textarea>
-                    <button type="button" class="promt-btn">
+                    <button type="button" class="prompt-btn">
                         <i class="fa-solid fa-dice"></i>
                     </button>
                 </div>
-                <!-- Promt Actions/Buttons -->
-                <div class="promt-action">
+                <!-- Prompt Actions/Buttons -->
+                <div class="prompt-actions">
                     <div class="select-wrapper">
-                        <select class="custom-select" required>
+                        <select class="custom-select" id="model-select" required>
                             <option value="">Select Model</option>
                             <option value="black-forest-labs/FLUX.1-dev">FLUX.1-dev</option>
                             <option value="black-forest-labs/FLUX.1-schnell">FLUX.1-schnell</option>
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="select-wrapper">
-                        <select class="custom-select" required>
+                        <select class="custom-select" id="count-select" required>
                             <option value="" selected disabled>Image Count</option>
                             <option value="1">1 Image</option>
                             <option value="2">2 Images</option>
@@ -58,7 +58,7 @@
                     </div>
 
                     <div class="select-wrapper">
-                        <select class="custom-select" required>
+                        <select class="custom-select" id="ratio-select" required>
                             <option value="" selected disabled>Aspect Ratio</option>
                             <option value="1/1">Square (1:1)</option>
                             <option value="2">Landscape (16:9)</option>
@@ -71,10 +71,14 @@
                         Generate
                     </button>
                 </div>
+
+                <!--Result Gallery Grid-->
+                <div class="gallery-grid"></div>
             </form>
         </div>
-
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
